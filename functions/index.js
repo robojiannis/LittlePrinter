@@ -22,6 +22,19 @@ exports.processRSSFeeds = functions
   .region("europe-west3").pubsub.schedule('every 12 hours')
   .onRun(async (context) => {
     try {
+      // Check if the function is paused
+      const settingsDoc = await db.collection('settings').doc('main').get();
+      if (!settingsDoc.exists) {
+        console.log('Settings document not found, creating with default values');
+        await db.collection('settings').doc('main').set({ paused: false });
+      } else {
+        const settings = settingsDoc.data();
+        if (settings.paused) {
+          console.log('Function is paused, skipping feed processing');
+          return null;
+        }
+      }
+
       // Get all RSS feeds from Firestore
       const feedsSnapshot = await db.collection('feeds').get();
       const updates = [];
