@@ -37,7 +37,7 @@ export default function ({ onSend, owner }) {
       <Preview
         ref={ref}
         text={message}
-        header={<Header time={time} owner={owner} />}
+        header={<Header time={time} />}
       />
       <div className="is-keyboard-accessory">
         <MessageInput message={message} onChange={setMessage} onSend={handleSend} />

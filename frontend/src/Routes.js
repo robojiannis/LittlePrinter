@@ -13,9 +13,16 @@ function NotFound() {
 }
 
 export default ({ dispatch, state }) => {
+  // Get the first printer ID from state
+  const firstPrinterId = state.printers && Object.keys(state.printers).length > 0 ? Object.keys(state.printers)[0] : null;
+  console.log("firstPrinterId", firstPrinterId);
   return (
     <Router>
-      <Redirect from="/" to="printers" noThrow />
+      {firstPrinterId ? (
+        <Redirect from="/" to={`/printers/${firstPrinterId}/messages`} noThrow />
+      ) : (
+        <Redirect from="/" to="printers" noThrow />
+      )}
 
       <Printers.default path="printers">
         <Printers.List path="/" state={state} dispatch={dispatch} />

@@ -7,7 +7,8 @@
     "serve": "firebase emulators:start --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
-    "deploy": "cd functions && npm install && cd .. && firebase deploy --only functions",
+    "deploy-functions": "cd functions && npm install && cd .. && firebase deploy --only functions",
+    "deploy-hosting": "cd frontend && NODE_OPTIONS=--openssl-legacy-provider yarn build && cd .. && firebase deploy --only hosting",
     "logs": "firebase functions:log"
   },
   "dependencies": {
