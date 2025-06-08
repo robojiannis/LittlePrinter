@@ -1,0 +1,45 @@
+.container {
+  height: calc(100vh - 65px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.5rem;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.container label {
+  display: flex;
+  flex-direction: column;
+}
+
+.container label span {
+  padding-bottom: 2rem;
+}
+
+.container input {
+  height: 46px;
+
+  border: 2px solid #000;
+  background: transparent;
+
+  font-size: inherit;
+  text-align: center;
+}
+
+.container button {
+  background: transparent;
+  border: none;
+
+  margin-top: 2rem;
+
+  font-size: inherit;
+}

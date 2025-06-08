@@ -1,0 +1,112 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.uploadSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadButton {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.uploadButton:hover {
+  background-color: #e0e0e0;
+  border-color: #999;
+}
+
+.previewSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.previewContainer {
+  width: 100%;
+  max-width: 400px;
+}
+
+.preview {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.loading {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  color: #666;
+}
+
+.captionSection {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.captionInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.captionInput:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.captionInput::placeholder {
+  color: #999;
+}
+
+.caption {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.sendButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sendButton:hover {
+  background-color: #0056b3;
+}
+
+.sendButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+} 

@@ -31,10 +31,10 @@ exports.processRSSFeeds = functions
         const settings = settingsDoc.data();
         if (settings.paused) {
           console.log('Function is paused, skipping feed processing');
-          return null;
+          return;
         }
       }
-
+      console.log('Processing RSS feeds');
       // Get all RSS feeds from Firestore
       const feedsSnapshot = await db.collection('feeds').get();
       const updates = [];
