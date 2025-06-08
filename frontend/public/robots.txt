@@ -1,3 +1,57 @@
 User-agent: *
-Allow: /$
+Disallow: /
+
+# Prevent archiving
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+# Prevent translation
+User-agent: Googlebot
+Disallow: /
+
+# Prevent caching
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: Googlebot-News
+Disallow: /
+
+User-agent: Googlebot-Video
+Disallow: /
+
+# Prevent social media crawlers
+User-agent: Twitterbot
+Disallow: /
+
+User-agent: facebookexternalhit
+Disallow: /
+
+User-agent: LinkedInBot
+Disallow: /
+
+# Prevent AI crawlers
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Prevent other common crawlers
+User-agent: Bingbot
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+# Prevent all other bots
+User-agent: *
 Disallow: /
