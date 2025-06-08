@@ -19,7 +19,7 @@ export default function SelectType({ backTo }) {
         </li>
 
         <li>
-          <Type type="quick-draw" disabled />
+          <Type type="quick-draw" />
         </li>
       </ul>
     </div>

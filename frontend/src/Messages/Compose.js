@@ -7,6 +7,7 @@ import { getPrinterById } from "../reducer";
 
 import PosterFont from "./components/PosterFont";
 import Dithergram from "./components/Dithergram";
+import QuickDraw from "./components/QuickDraw";
 import Status from "./components/Status";
 
 const State = {
@@ -52,6 +53,9 @@ export default function Compose({ dispatch, state, printerId, messageType }) {
       switch (messageType) {
         case 'dithergram':
           content = <Dithergram onSend={handleSend} />;
+          break;
+        case 'quick-draw':
+          content = <QuickDraw onSend={handleSend} />;
           break;
         case 'poster-font':
         default:

@@ -20,7 +20,7 @@ export default function({ className = "", message, onChange, onSend }) {
         onFocus={handleFocus}
       />
       <button className={styles.send} onClick={onSend}>
-        Go
+        Send
       </button>
     </div>
   );
